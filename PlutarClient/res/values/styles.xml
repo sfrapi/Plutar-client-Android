@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    
+    <style name="Widget.EditText.Black" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+    <style name="Widget.ButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    
+
+</resources>
