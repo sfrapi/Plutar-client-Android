@@ -32,6 +32,7 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 
 import org.apache.http.client.ClientProtocolException;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -48,9 +49,6 @@ import android.os.Environment;
 import android.provider.ContactsContract;
 import android.provider.Settings.Secure;
 import android.speech.tts.TextToSpeech;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.text.ClipboardManager;
 import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
@@ -60,7 +58,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+import android.text.ClipboardManager;
 
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 
 
 /**
@@ -319,7 +320,7 @@ public class PlutarActivity extends FragmentActivity {
 						  m.putExtra("liste", r);
 						  startActivityForResult(m,18);	  
 					  }
-				  }.execute("/googlemessage/getmp3",null);
+				  }.execute("/getmp3",null);
 			  }
         });
         
@@ -597,7 +598,7 @@ public class PlutarActivity extends FragmentActivity {
 	
 
     public void showDateDialog(View v) {
-        FragmentManager fm = getSupportFragmentManager();
+    	FragmentManager fm = getSupportFragmentManager();
         DatePickerFragment editNameDialog = new DatePickerFragment() {
             public void onDateSet(DatePicker view,  int year, int monthOfYear, int dayOfMonth) {
             	cmdDate.setText(dayOfMonth+"/"+(monthOfYear+1)+"/"+year);
