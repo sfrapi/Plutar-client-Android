@@ -59,7 +59,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import android.text.ClipboardManager;
-
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
